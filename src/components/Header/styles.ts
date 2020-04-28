@@ -17,15 +17,18 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
 
     nav {
+      display: flex;
+      flex-direction: row;
+
+      div + div {
+        margin-left: 32px;
+      }
+
       a {
         color: #fff;
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
-
-        & + a {
-          margin-left: 32px;
-        }
 
         &:hover {
           opacity: 0.6;
@@ -33,4 +36,17 @@ export const Container = styled.div<ContainerProps>`
       }
     }
   }
+`;
+
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Barrinha = styled.div`
+  width: 73px;
+  background: #ff872c;
+  height: 2px;
+  margin-top: 10px;
 `;
